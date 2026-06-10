@@ -106,7 +106,7 @@ When you run `/plugin install`, Claude Code prompts you for the following creden
          "args": [
            "run", "-i", "--rm",
            "-e", "EMAIL_CREDENTIALS",
-           "-e", "MCP_TRANSPORT=stdio",
+           "-e", "MCP_TRANSPORT",
            "n24q02m/better-email-mcp:latest"
          ]
        }
@@ -116,7 +116,8 @@ When you run `/plugin install`, Claude Code prompts you for the following creden
 
 2. Set env vars in your shell profile:
    ```bash
-   export EMAIL_CREDENTIALS="user@custom.com:pass:imap.custom.com"
+   export EMAIL_CREDENTIALS="user1@gmail.com:pass1,user2@outlook.com:pass2,user3@yahoo.com:pass3"
+   export MCP_TRANSPORT=stdio
    ```
 
 ## Why upgrade to HTTP mode?
